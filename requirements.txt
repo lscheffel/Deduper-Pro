@@ -1,4 +1,4 @@
 PyQt5
 openpyxl
-send2trash
 xxhash
+send2trash
