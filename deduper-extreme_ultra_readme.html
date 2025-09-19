@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deduper Extreme - Descrição Completa do Repositório</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.6;color:#333;background-color:#f8f9fa;padding-top:76px}
+        .navbar{position:fixed;top:0;width:100%;z-index:1030;margin-bottom:0;background-color:#212529!important;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+        .highlight{color:#0d6efd;font-weight:bold}
+        .section-title{margin:40px 0 20px;text-align:center;font-size:2rem}
+        .card{margin-bottom:20px;box-shadow:0 4px 6px rgba(0,0,0,0.1);border-radius:12px;transition:transform 0.2s}
+        .card:hover{transform:translateY(-5px)}
+        .accordion-button{font-weight:500}
+        footer{background:#212529;color:white;padding:20px 0;text-align:center;margin-top:40px}
+        footer a{color:#0d6efd;text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        .hero{background:linear-gradient(135deg,#0d6efd,#6610f2);color:white;padding:80px 20px;text-align:center;border-radius:12px;margin-bottom:40px}
+        .hero h1{font-size:3rem;margin-bottom:20px}
+        .hero p{font-size:1.25rem}
+        .badges img{margin:5px}
+        #backToTop{position:fixed;bottom:20px;right:20px;display:none;background-color:#0d6efd;color:white;border:none;border-radius:50%;width:50px;height:50px;font-size:24px;cursor:pointer;box-shadow:0 4px 6px rgba(0,0,0,0.3);transition:background-color 0.3s}
+        #backToTop:hover{background-color:#0b5ed7}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">Deduper Extreme</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#manifesto">Manifesto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#arquivos">Arquivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#analise">Análise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funcoes">Funções</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#versionamento">Versionamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proximos">Próximos Passos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sugestoes">Sugestões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contribuir">Contribuir</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Deduper Extreme</h1>
+            <p>Ferramenta avançada de deduplicação de arquivos com interface gráfica em PyQt, oferecendo modos Easy, Medium e Advanced para otimizar o gerenciamento de espaço em disco.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="manifesto">
+            <h2 class="section-title highlight">Manifesto</h2>
+            <p>O Deduper Extreme visa fornecer uma solução eficiente e avançada para a deduplicação de arquivos, ajudando usuários a liberar espaço em disco de forma segura e inteligente. Nossa missão é simplificar o processo de identificação e remoção de arquivos duplicados, oferecendo flexibilidade através de múltiplos modos de operação e algoritmos de hashing robustos. Acreditamos em uma abordagem user-friendly, com interface gráfica intuitiva e opções avançadas para usuários experientes.</p>
+        </section>
+
+        <section id="arquivos">
+            <h2 class="section-title highlight">Arquivos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark-code"></i> app_extreme.py</h5>
+                            <p class="card-text">Arquivo principal da aplicação, contendo a interface gráfica em PyQt6 e a lógica básica de deduplicação. Inclui modos Easy, Medium e Advanced com configurações variadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark-code"></i> core_extreme.py</h5>
+                            <p class="card-text">Núcleo avançado do deduplicador com funcionalidades extras como hashing multimodal (MD5, SHA1, xxhash, CRC32), processamento paralelo e throttling adaptativo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark-text"></i> requirements.txt</h5>
+                            <p class="card-text">Lista de dependências Python necessárias para executar a aplicação, incluindo PyQt5, openpyxl, xxhash e send2trash.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark-text"></i> README.md</h5>
+                            <p class="card-text">Documentação básica do projeto, incluindo funcionalidades, instalação e uso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark"></i> .gitignore</h5>
+                            <p class="card-text">Arquivo para especificar quais arquivos e diretórios devem ser ignorados pelo Git.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-file-earmark-code"></i> EnvMaker.ps1</h5>
+                            <p class="card-text">Script PowerShell para configuração automatizada do ambiente de desenvolvimento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analise">
+            <h2 class="section-title highlight">Análise</h2>
+            <p>O Deduper Extreme é construído em Python, utilizando PyQt6 para a interface gráfica, garantindo uma experiência responsiva e moderna. A arquitetura é modular, com o núcleo de deduplicação separado da UI, permitindo fácil manutenção e extensão. Utiliza bibliotecas como hashlib para hashing padrão, xxhash para performance, e openpyxl para geração de relatórios XLSX. O processamento paralelo com concurrent.futures assegura eficiência em diretórios grandes, enquanto o cancelamento cooperativo e throttling adaptativo proporcionam controle e estabilidade.</p>
+        </section>
+
+        <section id="funcoes">
+            <h2 class="section-title highlight">Funções</h2>
+            <div class="accordion" id="accordionFuncoes">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#modoEasy">
+                            Modo Easy
+                        </button>
+                    </h2>
+                    <div id="modoEasy" class="accordion-collapse collapse show" data-bs-parent="#accordionFuncoes">
+                        <div class="accordion-body">
+                            Modo simplificado para usuários iniciantes, oferecendo seleção de diretório, algoritmo de hashing (MD5, SHA1, SHA256) e opções básicas de exclusão (lixeira ou manter ambos).
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modoMedium">
+                            Modo Medium
+                        </button>
+                    </h2>
+                    <div id="modoMedium" class="accordion-collapse collapse" data-bs-parent="#accordionFuncoes">
+                        <div class="accordion-body">
+                            Modo intermediário com algoritmos adicionais, critérios de exclusão (permanente, lixeira, manter), critério de seleção (mais novo/antigo) e opção de relatório XLSX.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modoAdvanced">
+                            Modo Advanced
+                        </button>
+                    </h2>
+                    <div id="modoAdvanced" class="accordion-collapse collapse" data-bs-parent="#accordionFuncoes">
+                        <div class="accordion-body">
+                            Modo avançado com todas as opções, incluindo comparação byte-a-byte após hashing, ajuste de tamanho de bloco e configurações finas para otimização.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#relatorios">
+                            Relatórios XLSX
+                        </button>
+                    </h2>
+                    <div id="relatorios" class="accordion-collapse collapse" data-bs-parent="#accordionFuncoes">
+                        <div class="accordion-body">
+                            Geração automática de relatórios detalhados em formato Excel, listando duplicatas encontradas, arquivos originais e hashes.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cancelamento">
+                            Cancelamento Cooperativo
+                        </button>
+                    </h2>
+                    <div id="cancelamento" class="accordion-collapse collapse" data-bs-parent="#accordionFuncoes">
+                        <div class="accordion-body">
+                            Possibilidade de cancelar o processo de deduplicação a qualquer momento, com parada segura e logging de progresso.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="versionamento">
+            <h2 class="section-title highlight">Versionamento</h2>
+            <p>Versão atual: 1.0.0 - Lançamento inicial com modos Easy, Medium e Advanced. Política de versionamento segue SemVer. Próximas versões incluirão melhorias em performance, novos algoritmos de hashing e integração com bancos de dados para grandes volumes de dados.</p>
+        </section>
+
+        <section id="proximos">
+            <h2 class="section-title highlight">Próximos Passos</h2>
+            <ul>
+                <li>Implementar checkpointing completo para retomada de processos interrompidos.</li>
+                <li>Adicionar suporte a SQLite para indexação de arquivos em modo avançado.</li>
+                <li>Desenvolver interface web alternativa à GUI desktop.</li>
+                <li>Suporte a deduplicação em múltiplos diretórios simultaneamente.</li>
+                <li>Integração com serviços de nuvem para backup de arquivos removidos.</li>
+            </ul>
+        </section>
+
+        <section id="faq">
+            <h2 class="section-title highlight">FAQ</h2>
+            <div class="accordion" id="accordionFAQ">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Como instalar o Deduper Extreme?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Execute <code>pip install -r requirements.txt</code> para instalar as dependências necessárias.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Como usar a aplicação?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Execute <code>python app_extreme.py</code>, selecione o modo desejado, escolha o diretório e inicie o processo.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            O que é deduplicação de arquivos?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            É o processo de identificar arquivos idênticos e remover as cópias, liberando espaço em disco enquanto mantém uma versão do arquivo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sugestoes">
+            <h2 class="section-title highlight">Sugestões</h2>
+            <p>Faça backup dos arquivos importantes antes de executar a deduplicação. Use o modo Easy para testes iniciais. Monitore os logs para identificar possíveis erros. Para grandes volumes, considere o modo Advanced com throttling ativado. Organize seus arquivos em diretórios lógicos para melhor eficiência.</p>
+        </section>
+
+        <section id="contribuir">
+            <h2 class="section-title highlight">Contribua com o Projeto</h2>
+            <p>Contribuições são bem-vindas! Faça fork do repositório, crie uma branch para suas mudanças, implemente melhorias e envie um pull request. Para reportar bugs ou sugerir features, abra uma issue no GitHub. Siga as melhores práticas de código Python e inclua testes quando possível.</p>
+            <a href="https://github.com/usuario/deduper-extreme" class="btn btn-primary">Ver no GitHub</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="badges">
+            <img src="https://img.shields.io/github/stars/usuario/deduper-extreme" alt="Stars">
+            <img src="https://img.shields.io/github/forks/usuario/deduper-extreme" alt="Forks">
+            <img src="https://img.shields.io/github/issues/usuario/deduper-extreme" alt="Issues">
+        </div>
+        <p>&copy; 2023 Deduper Extreme. <a href="https://github.com/usuario/deduper-extreme">Ver no GitHub</a></p>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById('backToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
